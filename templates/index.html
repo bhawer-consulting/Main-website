@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhawer Consulting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="{{ url_for('static', filename='images/image.png') }}" alt="Bhawer Consulting" class="logo-img">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="nav-cta">Get Started</a>
+            <button class="nav-hamburger" id="navHamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <canvas id="hero-canvas" class="hero-canvas"></canvas>
+        <div class="hero-glow"></div>
+        <div class="hero-container">
+            <h1 class="hero-headline">
+                Engineering Digital Solutions That Drive Business Growth.
+            </h1>
+            <p class="hero-description">
+                We help startups and businesses build scalable software, AI solutions, websites, and digital systems that create measurable business impact.
+            </p>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn btn-primary magnetic-btn">Book a Free Consultation</a>
+                <a href="#work" class="btn btn-secondary magnetic-btn">View Our Work</a>
+            </div>
+            <div class="hero-trust">
+                <div class="trust-item">
+                    <span class="trust-icon">✓</span>
+                    1 Successful Project Delivered
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">✓</span>
+                    100% Client Satisfaction
+                </div>
+                <div class="trust-item">
+                    <span class="trust-icon">✓</span>
+                    AI • Software • Web Development
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">What We Do</span>
+                <h2 class="section-title">Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2" />
+                            <path d="M20 32 L28 40 L44 24" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">AI Development</h3>
+                    <p class="service-description">Intelligent systems that automate and enhance your workflows.</p>
+                    <ul class="service-benefits">
+                        <li>Custom AI models</li>
+                        <li>Automation tools</li>
+                        <li>Data insights</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="8" y="12" width="48" height="40" rx="4" stroke="currentColor" stroke-width="2" />
+                            <path d="M8 24 H56" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Custom Software</h3>
+                    <p class="service-description">Scalable software solutions built for your unique needs.</p>
+                    <ul class="service-benefits">
+                        <li>Tailored solutions</li>
+                        <li>Scalable architecture</li>
+                        <li>Clean codebase</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="12" y="28" width="8" height="24" rx="2" stroke="currentColor" stroke-width="2" />
+                            <rect x="28" y="16" width="8" height="36" rx="2" stroke="currentColor" stroke-width="2" />
+                            <rect x="44" y="8" width="8" height="44" rx="2" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Web Development</h3>
+                    <p class="service-description">Modern, responsive websites that convert visitors.</p>
+                    <ul class="service-benefits">
+                        <li>Responsive design</li>
+                        <li>SEO optimized</li>
+                        <li>Fast load times</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="16" y="16" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2" />
+                            <circle cx="26" cy="26" r="3" fill="currentColor" />
+                            <path d="M22 38 L32 30 L42 38" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">UI/UX Design</h3>
+                    <p class="service-description">Beautiful, intuitive designs that users love.</p>
+                    <ul class="service-benefits">
+                        <li>User research</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="32" cy="32" r="28" stroke="currentColor" stroke-width="2" />
+                            <path d="M32 16 L32 32 L44 40" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Business Automation</h3>
+                    <p class="service-description">Streamline operations with smart automation.</p>
+                    <ul class="service-benefits">
+                        <li>Workflow optimization</li>
+                        <li>Integrations</li>
+                        <li>Cost savings</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M32 4 L58 32 L32 60 L6 32 Z" stroke="currentColor" stroke-width="2" />
+                            <circle cx="32" cy="32" r="10" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Startup Consulting</h3>
+                    <p class="service-description">Technical guidance to launch and scale.</p>
+                    <ul class="service-benefits">
+                        <li>Tech roadmap</li>
+                        <li>MVP development</li>
+                        <li>Scaling strategy</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 16 L52 16 L52 48 L12 48 Z" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 28 L52 28" stroke="currentColor" stroke-width="2" />
+                            <path d="M32 28 L32 48" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Digital Strategy</h3>
+                    <p class="service-description">Strategic planning for digital success.</p>
+                    <ul class="service-benefits">
+                        <li>Goal setting</li>
+                        <li>Competitive analysis</li>
+                        <li>Actionable plan</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-card glass-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="12" y="12" width="40" height="40" rx="4" stroke="currentColor" stroke-width="2" />
+                            <path d="M24 28 L32 36 L48 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Technical Support</h3>
+                    <p class="service-description">Ongoing support to keep things running.</p>
+                    <ul class="service-benefits">
+                        <li>24/7 availability</li>
+                        <li>Quick fixes</li>
+                        <li>Proactive maintenance</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Work Section -->
+    <section class="section section-alt" id="work">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Featured Project</span>
+                <h2 class="section-title">Management Academy</h2>
+            </div>
+            <div class="work-wrapper">
+                <div class="work-mockup glass-card">
+                    <div class="mockup-header">
+                        <div class="mockup-dots">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="mockup-content">
+                        <div class="mockup-line w-30"></div>
+                        <div class="mockup-line w-50"></div>
+                        <div class="mockup-chart"></div>
+                    </div>
+                </div>
+                <div class="work-info">
+                    <h3 class="work-title">Project Overview</h3>
+                    <p class="work-desc">Designed and developed a complete digital platform to improve the academy's online presence and streamline student interactions.</p>
+                    <h4 class="work-subtitle">Results</h4>
+                    <ul class="work-results">
+                        <li>Professional business website</li>
+                        <li>Improved online visibility</li>
+                        <li>Better student engagement</li>
+                        <li>Modern responsive design</li>
+                    </ul>
+                    <div class="work-tech">
+                        <h4 class="work-subtitle">Technologies Used</h4>
+                        <div class="tech-tags">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                        <p class="testimonial-text">"Amazing work! The team delivered beyond our expectations and created a beautiful, functional platform for our academy."</p>
+                        <div class="testimonial-author">
+                            <strong>Management Academy</strong>
+                            <span class="testimonial-source">Google Review</span>
+                        </div>
+                    </div>
+                    <a href="https://bcom-by-dk-sir.vercel.app/" class="btn btn-primary magnetic-btn">View Case Study</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section" id="why">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Why Choose Us</span>
+                <h2 class="section-title">Why Choose Bhawer Consulting</h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3 class="why-title">Tailored Solutions</h3>
+                    <p class="why-desc">Custom solutions built specifically for your business needs.</p>
+                </div>
+                <div class="why-card">
+                    <h3 class="why-title">Transparent Communication</h3>
+                    <p class="why-desc">Clear, honest updates every step of the way.</p>
+                </div>
+                <div class="why-card">
+                    <h3 class="why-title">Modern Technology Stack</h3>
+                    <p class="why-desc">Latest tools and frameworks for optimal performance.</p>
+                </div>
+                <div class="why-card">
+                    <h3 class="why-title">Fast Delivery</h3>
+                    <p class="why-desc">Efficient processes to get your project live quickly.</p>
+                </div>
+                <div class="why-card">
+                    <h3 class="why-title">Long-Term Partnership</h3>
+                    <p class="why-desc">We're here for you beyond the launch.</p>
+                </div>
+                <div class="why-card">
+                    <h3 class="why-title">Quality First Approach</h3>
+                    <p class="why-desc">Attention to detail in every line of code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="section section-alt" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">About Us</span>
+                <h2 class="section-title">Building Technology That Helps Businesses Grow</h2>
+            </div>
+            <div class="about-text">
+                <p>Bhawer Consulting was founded with a simple vision: to help businesses leverage technology to solve real-world challenges.</p>
+            </div>
+            <div class="founders-grid">
+                <div class="founder-card glass-card">
+                    <div class="founder-avatar">HB</div>
+                    <h3 class="founder-name">Harshal Bhawer</h3>
+                    <p class="founder-role">Co-Founder | Software Developer & Solutions Architect</p>
+                </div>
+                <div class="founder-card glass-card">
+                    <div class="founder-avatar">CF</div>
+                    <h3 class="founder-name">Co-Founder</h3>
+                    <p class="founder-role">Business Strategy & Client Relations</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Milestones Section -->
+    <section class="section" id="milestones">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Our Journey</span>
+                <h2 class="section-title">Milestones</h2>
+            </div>
+            <div class="milestones-grid">
+                <div class="milestone-card">
+                    <div class="milestone-icon">🚀</div>
+                    <h3 class="milestone-title">Founded Bhawer Consulting</h3>
+                </div>
+                <div class="milestone-card">
+                    <div class="milestone-icon">✅</div>
+                    <h3 class="milestone-title">First Client Successfully Delivered</h3>
+                </div>
+                <div class="milestone-card">
+                    <div class="milestone-icon">⭐</div>
+                    <h3 class="milestone-title">First 5-Star Google Review</h3>
+                </div>
+                <div class="milestone-card">
+                    <div class="milestone-icon">🤝</div>
+                    <h3 class="milestone-title">Growing Client Network</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section section-alt" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Client Love</span>
+                <h2 class="section-title">Testimonials</h2>
+            </div>
+            <div class="testimonials-wrapper">
+                <div class="testimonial-card-large glass-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p class="testimonial-text">"Working with Bhawer Consulting was an absolute pleasure. They transformed our vision into a beautiful, functional website that our students love. The attention to detail and commitment to quality was outstanding."</p>
+                    <div class="testimonial-author">
+                        <strong>Management Academy</strong>
+                        <span class="testimonial-source">Google Review</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Got Questions?</span>
+                <h2 class="section-title">FAQ</h2>
+            </div>
+            <div class="faq-wrapper">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Why choose Bhawer Consulting?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We deliver tailored, high-quality solutions with transparent communication, modern tech, and a focus on your business growth.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What industries do you work with?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We work with a wide range of industries including education, healthcare, finance, e-commerce, and more.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does a project take?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Timelines vary by project scope, but we always provide clear estimates and deliver on time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you build AI solutions?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We build custom AI solutions, automation tools, and data-driven systems.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What technologies do you use?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>We use modern technologies including HTML/CSS/JS, React, Node.js, Python, and more.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can you redesign existing websites?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! We love redesigning and improving existing digital products.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you provide ongoing support?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, we offer ongoing technical support and maintenance packages.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How much does a project cost?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Costs depend on project scope. Contact us for a free consultation and quote!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you work with startups?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We specialize in helping startups build MVPs and scale their technology.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How do we get started?</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="faq-arrow">
+                            <path d="M6 9 L12 15 L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Book a free consultation using the form below, and let's discuss your project!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-kicker">Get In Touch</span>
+                <h2 class="section-title">Let's Build Something Great Together</h2>
+            </div>
+            <div class="contact-wrapper">
+                <form class="contact-form glass-card">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary magnetic-btn">Send Message</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <a href="mailto:bhawer.consulting@gmail.com">bhawer.consulting@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <a href="tel:+919871543550">+91 98715 43550</a>
+                        <a href="tel:+917976670331">+91 79766 70331</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>LinkedIn</h3>
+                        <a href="#">linkedin.com/company/bhawer</a>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Location</h3>
+                        <p>City, State</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link">LinkedIn</a>
+                        <a href="#" class="social-link">Twitter</a>
+                        <a href="#" class="social-link">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="nav-logo">
+                        <img src="{{ url_for('static', filename='images/image.png') }}" alt="Bhawer Consulting" class="logo-img">
+                    </div>
+                    <p class="footer-text">Engineering digital solutions that drive business growth.</p>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#work">Case Studies</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">AI Development</a></li>
+                        <li><a href="#services">Web Development</a></li>
+                        <li><a href="#services">Custom Software</a></li>
+                        <li><a href="#services">Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-heading">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bhawer Consulting. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
