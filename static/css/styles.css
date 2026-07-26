@@ -428,6 +428,16 @@ body { font-size: 17px; }
 #why .why-icon img { filter: brightness(0) saturate(100%) invert(67%) sepia(20%) saturate(940%) hue-rotate(40deg) brightness(92%) contrast(84%); height: 25px; object-fit: contain; width: 25px; }
 #why .why-card:hover .why-icon img { filter: brightness(0) saturate(100%) invert(80%) sepia(20%) saturate(920%) hue-rotate(40deg) brightness(105%) contrast(91%) drop-shadow(0 0 8px rgba(180,204,108,.55)); }
 
+/* Focused hero brand statement. */
+.hero-tagline { align-items: center; color: rgba(244,241,232,.74); display: inline-flex; font-family: Sora, Inter, sans-serif; font-size: 12px; font-weight: 600; gap: 12px; letter-spacing: .115em; margin: 46px 0 0; text-transform: uppercase; }
+.hero-tagline::before, .hero-tagline::after { background: linear-gradient(90deg, transparent, var(--hover)); content: ""; height: 1px; width: 42px; }
+.hero-tagline::after { background: linear-gradient(90deg, var(--hover), transparent); }
+
+@media (max-width: 640px) {
+    .hero-tagline { font-size: 10px; gap: 8px; letter-spacing: .09em; margin-top: 34px; }
+    .hero-tagline::before, .hero-tagline::after { width: 22px; }
+}
+
 /* Final readability, rhythm, and conversion hierarchy */
 :root { --reading: rgba(244,241,232,.84); --reading-muted: rgba(244,241,232,.68); }
 body { font-size: 18px; line-height: 1.58; }
@@ -450,6 +460,7 @@ body { font-size: 18px; line-height: 1.58; }
 #services .service-card::before { background: linear-gradient(90deg, transparent, rgba(146,165,110,.72), transparent); content: ""; height: 1px; left: 30px; opacity: .35; position: absolute; right: 30px; top: 0; transition: opacity 300ms var(--ease); }
 #services .service-card:nth-child(3n + 1) { background: linear-gradient(150deg, rgba(39,48,33,.76), rgba(13,15,12,.98)); border-color: rgba(146,165,110,.28); }
 #services .service-card:nth-child(3n + 1) .service-icon { background: linear-gradient(145deg, rgba(146,165,110,.2), rgba(39,48,33,.68)); }
+#services .service-card:nth-child(7) { background: linear-gradient(150deg, rgba(45,55,35,.82), rgba(13,15,12,.98)); border-color: rgba(146,165,110,.34); }
 #services .service-card:hover::before { opacity: 1; }
 #services .service-title { font-size: 21px; letter-spacing: -.035em; margin-bottom: 13px; }
 #services .service-description { font-size: 15px; line-height: 1.7; }
@@ -461,6 +472,7 @@ body { font-size: 18px; line-height: 1.58; }
 #work .work-wrapper { align-items: center; gap: clamp(38px, 6vw, 82px); }
 #work .work-title { font-size: clamp(28px, 2.5vw, 36px); letter-spacing: -.04em; }
 #work .work-desc { max-width: 560px; }
+#work .work-solution { color: rgba(244,241,232,.72); font-size: 16px; line-height: 1.72; margin-top: -3px; }
 #work .project-metrics { gap: 10px; margin: 29px 0; }
 #work .project-metric { background: rgba(122,139,90,.08); border-color: rgba(146,165,110,.18); }
 #work .project-metric strong { color: var(--text); font-size: 14px; }
