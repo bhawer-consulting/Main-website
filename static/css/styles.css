@@ -385,6 +385,49 @@ section { scroll-margin-top: 82px; }
     .service-card:hover .service-icon::before { animation: none; }
 }
 
+/* Four-step process and measured type scale */
+body { font-size: 17px; }
+.section-kicker { font-size: 11px; }.nav-links a, .nav-cta { font-size: 13px; }.footer-text, .footer-links a { font-size: 14px; }
+.service-description, .why-desc, .founder-description, .milestone-description, .faq-answer, .contact-founder div > span { font-size: 15px !important; }.service-benefits, .work-results, .testimonial-source, .footer-bottom { font-size: 13px; }
+
+#milestones { background: radial-gradient(ellipse 48% 90% at 5% 50%, rgba(122,139,90,.18), transparent 72%), #0b0c0b; border-bottom: 1px solid rgba(146,165,110,.2); border-top: 1px solid rgba(146,165,110,.2); padding: 88px 0; }
+#milestones .container { align-items: stretch; display: grid; gap: clamp(38px, 5vw, 74px); grid-template-columns: minmax(230px, .72fr) minmax(0, 2.28fr); }
+#milestones .section-header { align-self: center; margin: 0; max-width: 290px; text-align: left; }.process-intro { color: rgba(244,241,232,.76); font-size: 16px; line-height: 1.65; margin-top: 21px; }.process-intro::before { background: linear-gradient(90deg, var(--hover), transparent); content: ""; display: block; height: 1px; margin-bottom: 20px; width: 86px; }
+#milestones .milestones-grid { align-items: stretch; display: grid; gap: 24px; grid-template-columns: repeat(4, 1fr); overflow: visible; }.milestones-grid::before { background: linear-gradient(90deg, rgba(146,165,110,.46), rgba(146,165,110,.25)); height: 1px; left: 12%; right: 12%; top: 69px; }
+#milestones .milestone-card { background: linear-gradient(160deg, rgba(25,29,23,.78), rgba(12,14,12,.94)); border: 1px solid rgba(146,165,110,.2); border-radius: 16px; min-height: 256px; padding: 25px 22px; text-align: left; transition: border-color 300ms var(--ease), box-shadow 300ms var(--ease), transform 300ms var(--ease); }
+#milestones .milestone-card::before { color: rgba(146,165,110,.28); content: "0" counter(process-step); counter-increment: process-step; font-family: Sora,Inter,sans-serif; font-size: 22px; font-weight: 600; position: absolute; right: 18px; top: 14px; }#milestones .milestones-grid { counter-reset: process-step; }
+#milestones .milestone-card:hover { background: linear-gradient(160deg, rgba(38,47,31,.88), rgba(12,14,12,.96)); border-color: rgba(146,165,110,.48); box-shadow: 0 20px 42px rgba(0,0,0,.25), 0 0 30px rgba(122,139,90,.1); transform: translateY(-6px); }
+#milestones .milestone-icon { background: radial-gradient(circle, rgba(122,139,90,.22), rgba(20,25,18,.9)); border-color: rgba(180,204,108,.7); box-shadow: 0 0 0 5px rgba(122,139,90,.07), 0 0 20px rgba(146,165,110,.12); color: transparent; height: 62px; margin: 0 0 28px; position: relative; width: 62px; }#milestones .milestone-icon::before { color: var(--hover); content: "◈"; font-family: Sora,Inter,sans-serif; font-size: 22px; }.milestone-card:nth-child(2) .milestone-icon::before { content: "⌘"; }.milestone-card:nth-child(3) .milestone-icon::before { content: "✦"; }.milestone-card:nth-child(4) .milestone-icon::before { content: "↗"; }
+#milestones .milestone-title { font-size: 18px !important; margin-bottom: 11px; }.milestone-title::after { background: var(--hover); content: ""; display: block; height: 2px; margin-top: 12px; width: 34px; }#milestones .milestone-description { color: rgba(244,241,232,.76); font-size: 14px !important; line-height: 1.65; margin: 0; max-width: 180px; }
+
+@media (max-width: 980px) { #milestones .container { display: block; }#milestones .section-header { margin-bottom: 42px; max-width: 480px; }#milestones .milestones-grid { grid-template-columns: repeat(2, 1fr); }.milestones-grid::before { display: none; } }
+@media (max-width: 640px) { body { font-size: 16px; }#milestones { padding: 72px 0; }#milestones .milestones-grid { gap: 14px; }#milestones .milestone-card { min-height: 238px; padding: 21px 17px; }#milestones .milestone-icon { height: 54px; margin-bottom: 23px; width: 54px; }#milestones .milestone-title { font-size: 16px !important; }#milestones .milestone-description { font-size: 13px !important; } }
+
+/* Process SVG icon assets */
+#milestones .milestone-icon::before { content: none; }
+#milestones .milestone-icon img { filter: brightness(0) saturate(100%) invert(67%) sepia(20%) saturate(940%) hue-rotate(40deg) brightness(92%) contrast(84%); height: 29px; object-fit: contain; position: relative; width: 29px; z-index: 1; }
+
+/* Numbered Why Choose Us cards */
+#why { background: radial-gradient(ellipse 52% 55% at 50% 0%, rgba(122,139,90,.16), transparent 72%), #090a09; padding: 98px 0; }
+#why .section-header { margin-bottom: 38px; max-width: 800px; }#why .section-kicker { margin-bottom: 11px; }#why .section-title { font-size: clamp(34px,3.5vw,50px); }.why-intro { font-size: 15px; margin-top: 12px; }
+#why .why-grid { background: transparent; border: 0; border-radius: 0; counter-reset: why-step; display: grid; gap: 10px; grid-template-columns: repeat(6, 1fr); overflow: visible; }
+#why .why-card { background: linear-gradient(155deg, rgba(24,28,23,.84), rgba(12,14,12,.97)); border: 1px solid rgba(146,165,110,.25); border-radius: 12px; min-height: 184px; padding: 18px 13px 17px; position: relative; text-align: center; }
+#why .why-card + .why-card::after { background: none; height: auto; left: auto; top: auto; width: auto; }
+#why .why-card::after { border: 1px solid rgba(146,165,110,.28); border-radius: 50%; color: var(--hover); content: "0" counter(why-step); counter-increment: why-step; font-family: Sora,Inter,sans-serif; font-size: 9px; height: 23px; line-height: 21px; position: absolute; right: 10px; top: 9px; width: 23px; }
+#why .why-card::before { background: radial-gradient(circle at 35% 30%, rgba(146,165,110,.27), rgba(20,25,18,.88)); border-color: rgba(180,204,108,.7); box-shadow: 0 0 0 4px rgba(122,139,90,.06), 0 0 17px rgba(146,165,110,.1); font-size: 18px; height: 48px; margin-bottom: 15px; width: 48px; }
+#why .why-card:hover { background: linear-gradient(155deg, rgba(43,53,34,.85), rgba(12,14,12,.98)); border-color: rgba(146,165,110,.55); box-shadow: 0 16px 32px rgba(0,0,0,.26), 0 0 24px rgba(122,139,90,.09); transform: translateY(-5px); }
+#why .why-title { font-size: 14px; line-height: 1.28; margin: 0 auto 9px; max-width: 128px; }#why .why-title::after { background: var(--hover); content: ""; display: block; height: 1px; margin: 9px auto 0; width: 24px; }#why .why-desc { color: rgba(244,241,232,.72); font-size: 12px; line-height: 1.52; }
+#why .why-card::after { content: none; }
+
+@media (max-width: 1050px) { #why .why-grid { grid-template-columns: repeat(3, 1fr); }#why .why-card { border-bottom: 1px solid rgba(146,165,110,.25); } }
+@media (max-width: 640px) { #why { padding: 76px 0; }#why .section-header { text-align: left; }#why .why-grid { display: flex; gap: 12px; overflow-x: auto; padding: 2px 2px 15px; scroll-snap-type: x proximity; }#why .why-card { flex: 0 0 min(72vw, 280px); min-height: 205px; padding: 23px 18px; scroll-snap-align: start; }#why .why-title { font-size: 16px; }#why .why-desc { font-size: 13px; } }
+
+/* Why Choose Us SVG asset set */
+#why .why-card::before { content: none; display: none !important; }
+#why .why-icon { align-items: center; background: radial-gradient(circle at 35% 30%, rgba(146,165,110,.22), rgba(20,25,18,.88)); border: 1px solid rgba(180,204,108,.7); border-radius: 50%; box-shadow: 0 0 0 4px rgba(122,139,90,.06), 0 0 17px rgba(146,165,110,.1); display: flex; height: 48px; justify-content: center; margin: 0 auto 19px; width: 48px; }
+#why .why-icon img { filter: brightness(0) saturate(100%) invert(67%) sepia(20%) saturate(940%) hue-rotate(40deg) brightness(92%) contrast(84%); height: 25px; object-fit: contain; width: 25px; }
+#why .why-card:hover .why-icon img { filter: brightness(0) saturate(100%) invert(80%) sepia(20%) saturate(920%) hue-rotate(40deg) brightness(105%) contrast(91%) drop-shadow(0 0 8px rgba(180,204,108,.55)); }
+
 /* Proportional logo lockup */
 .nav-logo { gap: 12px; }
 .brand-name { font-size: 22px; height: 36px; justify-content: space-between; letter-spacing: .04em; line-height: .88; width: 96px; }

@@ -27,6 +27,35 @@ if (hamburger && navLinks) {
     });
 }
 
+// Send contact-form enquiries to WhatsApp with the visitor's details pre-filled.
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        if (!contactForm.reportValidity()) {
+            return;
+        }
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const projectMessage = document.getElementById('message').value.trim();
+        const whatsappMessage = [
+            'Hello Bhawer Consulting,',
+            '',
+            `My name is ${name}.`,
+            `Email: ${email}`,
+            '',
+            'Project details:',
+            projectMessage
+        ].join('\n');
+        const whatsappUrl = `https://wa.me/919871543550?text=${encodeURIComponent(whatsappMessage)}`;
+
+        window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    });
+}
+
 // Hero Canvas Animation
 const canvas = document.getElementById('hero-canvas');
 const ctx = canvas.getContext('2d');
