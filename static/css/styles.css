@@ -97,7 +97,7 @@ a { color: inherit; }
 .service-card:hover { background: linear-gradient(145deg, rgba(47,59,38,.68), rgba(26,26,24,.83)); border-color: rgba(146,165,110,.37); box-shadow: var(--shadow-lg), 0 0 42px rgba(122,139,90,.11); transform: translateY(-8px); }
 .service-icon { align-items: center; background: rgba(122,139,90,.1); border: 1px solid rgba(122,139,90,.16); border-radius: 16px; color: var(--primary); display: flex; height: 58px; justify-content: center; margin-bottom: 30px; transition: transform 300ms var(--ease), color 300ms var(--ease), background 300ms var(--ease); width: 58px; }
 .service-card:hover .service-icon { background: rgba(122,139,90,.18); color: var(--hover); transform: scale(1.07) rotate(-3deg); }
-.service-icon svg { height: 30px; width: 30px; }
+.service-icon svg, .service-icon img { height: 30px; width: 30px; }
 .service-title { font-family: Sora, Inter, sans-serif; font-size: 19px; font-weight: 700; letter-spacing: -.035em; line-height: 1.3; margin-bottom: 11px; }
 .service-description { color: var(--secondary); font-size: 15px; line-height: 1.65; }
 .service-benefits { color: rgba(202,197,184,.87); font-size: 13px; list-style: none; margin: 22px 0 20px; }
@@ -163,7 +163,7 @@ a { color: inherit; }
 .service-card > * { position: relative; z-index: 1; }
 .service-card:hover { box-shadow: 0 2px 1px rgba(0,0,0,.28), 0 32px 74px rgba(0,0,0,.36), 0 0 52px rgba(122,139,90,.15); transform: translateY(-11px); }
 .service-card:hover::after { opacity: 1; transform: scale(1); }
-.service-icon { height: 66px; width: 66px; }.service-icon svg { height: 34px; width: 34px; }
+.service-icon { height: 66px; width: 66px; }.service-icon svg, .service-icon img { height: 34px; width: 34px; }
 .service-card:hover .service-icon { transform: translateY(-3px) scale(1.12) rotate(-5deg); }
 
 .work-wrapper { gap: clamp(64px, 9vw, 138px); grid-template-columns: minmax(0,1.28fr) minmax(300px,.72fr); }
@@ -372,8 +372,8 @@ section { scroll-margin-top: 82px; }
 .service-icon { background: linear-gradient(145deg, rgba(122,139,90,.14), rgba(39,48,33,.58)); border-color: rgba(146,165,110,.25); box-shadow: inset 0 1px 0 rgba(244,241,232,.055), 0 10px 22px rgba(0,0,0,.16); overflow: hidden; position: relative; }
 .service-icon::before { background: linear-gradient(118deg, transparent 26%, rgba(244,241,232,.21) 47%, transparent 67%); content: ""; height: 180%; left: -150%; opacity: .38; pointer-events: none; position: absolute; top: -40%; transform: rotate(12deg); width: 78%; }
 .service-icon::after { background: radial-gradient(circle, rgba(180,204,108,.34), transparent 67%); content: ""; inset: -25%; opacity: .32; pointer-events: none; position: absolute; transition: opacity 350ms var(--ease), transform 350ms var(--ease); }
-.service-icon svg { filter: drop-shadow(0 0 8px rgba(180,204,108,.28)); position: relative; stroke-width: 2.25; transition: filter 350ms var(--ease), transform 350ms var(--ease); z-index: 1; }
-.service-card:hover .service-icon::before { animation: service-icon-flash 780ms var(--ease) both; }.service-card:hover .service-icon::after { opacity: .7; transform: scale(1.15); }.service-card:hover .service-icon svg { filter: drop-shadow(0 0 11px rgba(190,218,112,.7)); transform: scale(1.04); }
+.service-icon svg, .service-icon img { filter: brightness(0) saturate(100%) invert(62%) sepia(18%) saturate(889%) hue-rotate(38deg) brightness(94%) contrast(91%) drop-shadow(0 0 8px rgba(180,204,108,.28)); position: relative; stroke-width: 2.25; transition: filter 350ms var(--ease), transform 350ms var(--ease); z-index: 1; }
+.service-card:hover .service-icon::before { animation: service-icon-flash 780ms var(--ease) both; }.service-card:hover .service-icon::after { opacity: .7; transform: scale(1.15); }.service-card:hover .service-icon svg, .service-card:hover .service-icon img { filter: brightness(0) saturate(100%) invert(74%) sepia(24%) saturate(775%) hue-rotate(37deg) brightness(102%) contrast(91%) drop-shadow(0 0 11px rgba(190,218,112,.7)); transform: scale(1.04); }
 
 @keyframes service-icon-flash {
     from { left: -150%; opacity: 0; }
