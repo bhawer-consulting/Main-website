@@ -428,6 +428,92 @@ body { font-size: 17px; }
 #why .why-icon img { filter: brightness(0) saturate(100%) invert(67%) sepia(20%) saturate(940%) hue-rotate(40deg) brightness(92%) contrast(84%); height: 25px; object-fit: contain; width: 25px; }
 #why .why-card:hover .why-icon img { filter: brightness(0) saturate(100%) invert(80%) sepia(20%) saturate(920%) hue-rotate(40deg) brightness(105%) contrast(91%) drop-shadow(0 0 8px rgba(180,204,108,.55)); }
 
+/* Final readability, rhythm, and conversion hierarchy */
+:root { --reading: rgba(244,241,232,.84); --reading-muted: rgba(244,241,232,.68); }
+body { font-size: 18px; line-height: 1.58; }
+.section-title { letter-spacing: -.042em; line-height: 1.08; }
+.section-kicker { font-size: 11px; letter-spacing: .2em; }
+.hero-description, .work-desc, .about-text, .contact-intro { color: var(--reading); font-size: 18px; line-height: 1.72; }
+.service-description, .why-desc, .founder-description, .milestone-description, .faq-answer, .footer-text { color: var(--reading-muted); }
+
+/* A consistent cadence without needlessly long gaps between related sections. */
+.section { padding-bottom: 104px; padding-top: 104px; }
+#services { padding-bottom: 96px; }
+#work { padding-bottom: 108px; padding-top: 108px; }
+#about { padding-bottom: 110px; padding-top: 118px; }
+#why, #milestones { padding-bottom: 88px; padding-top: 88px; }
+.insights-layout #testimonials, .insights-layout #faq { padding-bottom: 84px; padding-top: 84px; }
+#contact { padding-bottom: 110px; padding-top: 106px; }
+
+/* Service rail: a calm hierarchy with periodic focal cards. */
+#services .service-card { background: linear-gradient(150deg, rgba(25,29,23,.92), rgba(13,15,12,.98)); border-color: rgba(244,241,232,.09); min-height: 358px; padding: 33px 30px 30px; }
+#services .service-card::before { background: linear-gradient(90deg, transparent, rgba(146,165,110,.72), transparent); content: ""; height: 1px; left: 30px; opacity: .35; position: absolute; right: 30px; top: 0; transition: opacity 300ms var(--ease); }
+#services .service-card:nth-child(3n + 1) { background: linear-gradient(150deg, rgba(39,48,33,.76), rgba(13,15,12,.98)); border-color: rgba(146,165,110,.28); }
+#services .service-card:nth-child(3n + 1) .service-icon { background: linear-gradient(145deg, rgba(146,165,110,.2), rgba(39,48,33,.68)); }
+#services .service-card:hover::before { opacity: 1; }
+#services .service-title { font-size: 21px; letter-spacing: -.035em; margin-bottom: 13px; }
+#services .service-description { font-size: 15px; line-height: 1.7; }
+#services .service-benefits { line-height: 1.7; margin-top: 23px; }
+#services .service-link { margin-top: 26px; }
+
+/* Give the case study its own visual authority. */
+#work .section-header { margin-bottom: 46px; }
+#work .work-wrapper { align-items: center; gap: clamp(38px, 6vw, 82px); }
+#work .work-title { font-size: clamp(28px, 2.5vw, 36px); letter-spacing: -.04em; }
+#work .work-desc { max-width: 560px; }
+#work .project-metrics { gap: 10px; margin: 29px 0; }
+#work .project-metric { background: rgba(122,139,90,.08); border-color: rgba(146,165,110,.18); }
+#work .project-metric strong { color: var(--text); font-size: 14px; }
+#work .testimonial-card { border-color: rgba(146,165,110,.25); margin-top: 30px; }
+
+/* Tighter, more legible executive and proof panels. */
+#why .section-header { margin-bottom: 32px; }
+#why .why-card { min-height: 208px; padding: 23px 16px 20px; }
+#why .why-title { font-size: 15px; }
+#why .why-desc { font-size: 13px; line-height: 1.62; }
+#about .about-text { font-size: 18px; line-height: 1.72; }
+#about .founder-card { min-height: 390px !important; }
+#milestones .milestone-card { min-height: 240px; }
+
+/* Contact becomes the page's decisive closing moment. */
+#contact .section-header { margin-bottom: 44px; }
+#contact .contact-intro { font-size: 18px; max-width: 640px; }
+#contact .contact-wrapper { align-items: start; gap: clamp(36px, 6vw, 84px); }
+#contact .contact-form { border-color: rgba(146,165,110,.38); box-shadow: 0 30px 80px rgba(0,0,0,.3), 0 0 0 1px rgba(244,241,232,.025) inset; }
+#contact .form-group { margin-bottom: 23px; }
+#contact .form-group::after { content: none !important; }
+#contact .form-group label { color: var(--text); font-size: 15px; font-weight: 650; margin-bottom: 8px; }
+#contact .form-group input, #contact .form-group textarea { color: var(--text); font-size: 16px; padding: 16px 18px; }
+#contact .form-group input::placeholder, #contact .form-group textarea::placeholder { color: rgba(244,241,232,.42); }
+#contact .form-group input:focus, #contact .form-group textarea:focus { border-color: var(--hover); box-shadow: 0 0 0 4px rgba(146,165,110,.11), 0 10px 28px rgba(0,0,0,.16); }
+#contact .contact-form .btn { box-shadow: 0 12px 28px rgba(122,139,90,.16); font-size: 15px; font-weight: 700; letter-spacing: -.015em; min-height: 58px; width: 100%; }
+#contact .contact-form .btn:hover { box-shadow: 0 14px 34px rgba(146,165,110,.22); transform: translateY(-2px); }
+#contact .contact-item a, #contact .contact-item p { font-size: 16px; line-height: 1.55; }
+
+/* Consistent phone iconography across leadership and contact details. */
+.founder-phone::before, .contact-founder a::before { content: none !important; }
+.founder-phone img, .contact-founder a img { filter: brightness(0) saturate(100%) invert(67%) sepia(20%) saturate(940%) hue-rotate(40deg) brightness(92%) contrast(84%); flex: 0 0 auto; height: 17px; object-fit: contain; width: 17px; }
+.contact-founder a { align-items: center; display: inline-flex; gap: 8px; }
+
+@media (max-width: 860px) {
+    .section { padding-bottom: 88px; padding-top: 88px; }
+    #about, #contact { padding-bottom: 92px; padding-top: 92px; }
+    #work .section-header { margin-bottom: 34px; }
+}
+
+@media (max-width: 640px) {
+    body { font-size: 16px; }
+    .section { padding-bottom: 76px; padding-top: 76px; }
+    .hero-description, .work-desc, .about-text, .contact-intro { font-size: 16px; }
+    #services .service-card { min-height: 344px; padding: 29px 25px; }
+    #services .service-title { font-size: 20px; }
+    #why, #milestones, #contact, #about { padding-bottom: 78px; padding-top: 78px; }
+    .insights-layout #testimonials, .insights-layout #faq { padding-bottom: 72px; padding-top: 72px; }
+    #contact .section-header { margin-bottom: 32px; }
+    #contact .contact-intro { font-size: 16px; }
+    #contact .contact-form { padding: 28px 22px; }
+}
+
 /* Proportional logo lockup */
 .nav-logo { gap: 12px; }
 .brand-name { font-size: 22px; height: 36px; justify-content: space-between; letter-spacing: .04em; line-height: .88; width: 96px; }
